@@ -72,8 +72,8 @@ enum class Network
     ByzantiumToConstantinopleFixAt5 = 104,
 
     Special = 0xff,         ///< Something else.
-    qtumMainNetwork = 9,    ///< QTUM Homestead + EIP150 + EIP158 Rules active from block 0 to enum class Network
-    qtumTestNetwork = 10
+    qtepMainNetwork = 9,    ///< QTEP Homestead + EIP150 + EIP158 Rules active from block 0 to enum class Network
+    qtepTestNetwork = 10
 };
 
 std::string const& genesisInfo(Network _n);

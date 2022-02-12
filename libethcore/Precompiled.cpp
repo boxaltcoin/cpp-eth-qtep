@@ -12,8 +12,8 @@
 #include <libdevcrypto/Hash.h>
 #include <libdevcrypto/LibSnark.h>
 #include <libethcore/Common.h>
-#ifdef QTUM_BUILD
-#include <qtum/qtumutils.h>
+#ifdef QTEP_BUILD
+#include <qtep/qteputils.h>
 #endif
 using namespace std;
 using namespace dev;
@@ -73,9 +73,9 @@ ETH_REGISTER_PRECOMPILED(btc_ecrecover)(bytesConstRef _in)
     try
     {
         bool recovered = false;
-#ifdef QTUM_BUILD
+#ifdef QTEP_BUILD
         u256 v = (u256)in.v;
-        recovered = qtumutils::btc_ecrecover(in.hash, v, in.r, in.s, ret);
+        recovered = qteputils::btc_ecrecover(in.hash, v, in.r, in.s, ret);
 #endif
         if(recovered)
         {

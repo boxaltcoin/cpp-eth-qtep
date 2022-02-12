@@ -7,7 +7,7 @@ using namespace dev;
 
 //Client configurations
 #include "genesis/mainNetwork.cpp"
-#include "genesis/qtumMainNetwork.cpp"
+#include "genesis/qtepMainNetwork.cpp"
 #include "genesis/ropsten.cpp"
 
 //Test configurations
@@ -29,7 +29,7 @@ using namespace dev;
 #include "genesis/test/mainNetworkNoProofTest.cpp"
 #include "genesis/test/mainNetworkTest.cpp"
 #include "genesis/test/muirGlacierTest.cpp"
-#include "genesis/test/qtumTestNetwork.cpp"
+#include "genesis/test/qtepTestNetwork.cpp"
 
 //Transition configurations
 #include "genesis/test/ByzantiumToConstantinopleFixAt5Test.cpp"
@@ -46,12 +46,12 @@ std::string const& dev::eth::genesisInfo(Network _n)
     switch (_n)
     {
     //Client genesis
-    case Network::qtumMainNetwork: return c_genesisInfoQtepMainNetwork;
+    case Network::qtepMainNetwork: return c_genesisInfoQtepMainNetwork;
     case Network::MainNetwork: return c_genesisInfoMainNetwork;
     case Network::Ropsten: return c_genesisInfoRopsten;
 
     //Test genesis
-    case Network::qtumTestNetwork: return c_genesisInfoQtepTestNetwork;
+    case Network::qtepTestNetwork: return c_genesisInfoQtepTestNetwork;
     case Network::MainNetworkTest: return c_genesisInfoMainNetworkTest;
     case Network::MainNetworkNoProofTest: return c_genesisInfoMainNetworkNoProofTest;
     case Network::FrontierNoProofTest: return c_genesisInfoFrontierNoProofTest;
@@ -99,8 +99,8 @@ h256 const& dev::eth::genesisStateRoot(Network _n)
 {
     switch (_n)
     {
-    case Network::qtumMainNetwork: return c_genesisStateRootQtepMainNetwork;
-    case Network::qtumTestNetwork: return c_genesisStateRootQtepTestNetwork;
+    case Network::qtepMainNetwork: return c_genesisStateRootQtepMainNetwork;
+    case Network::qtepTestNetwork: return c_genesisStateRootQtepTestNetwork;
     case Network::MainNetwork: return c_genesisStateRootMainNetwork;
     case Network::Ropsten:
     case Network::MainNetworkTest:
