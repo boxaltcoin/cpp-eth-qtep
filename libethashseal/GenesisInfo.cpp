@@ -46,12 +46,12 @@ std::string const& dev::eth::genesisInfo(Network _n)
     switch (_n)
     {
     //Client genesis
-    case Network::qtumMainNetwork: return c_genesisInfoQtumMainNetwork;
+    case Network::qtumMainNetwork: return c_genesisInfoQtepMainNetwork;
     case Network::MainNetwork: return c_genesisInfoMainNetwork;
     case Network::Ropsten: return c_genesisInfoRopsten;
 
     //Test genesis
-    case Network::qtumTestNetwork: return c_genesisInfoQtumTestNetwork;
+    case Network::qtumTestNetwork: return c_genesisInfoQtepTestNetwork;
     case Network::MainNetworkTest: return c_genesisInfoMainNetworkTest;
     case Network::MainNetworkNoProofTest: return c_genesisInfoMainNetworkNoProofTest;
     case Network::FrontierNoProofTest: return c_genesisInfoFrontierNoProofTest;
@@ -99,8 +99,8 @@ h256 const& dev::eth::genesisStateRoot(Network _n)
 {
     switch (_n)
     {
-    case Network::qtumMainNetwork: return c_genesisStateRootQtumMainNetwork;
-    case Network::qtumTestNetwork: return c_genesisStateRootQtumTestNetwork;
+    case Network::qtumMainNetwork: return c_genesisStateRootQtepMainNetwork;
+    case Network::qtumTestNetwork: return c_genesisStateRootQtepTestNetwork;
     case Network::MainNetwork: return c_genesisStateRootMainNetwork;
     case Network::Ropsten:
     case Network::MainNetworkTest:
